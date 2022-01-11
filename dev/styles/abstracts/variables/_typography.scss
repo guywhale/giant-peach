@@ -50,7 +50,7 @@ $poppins: 'Poppins', sans-serif;
 }
 /// 
 %h5 {
-    @include typography(1.6rem, 8.4rem, $poppins);
+    @include typography(1.6rem, 2.4rem, $poppins);
     font-weight: 400;
     letter-spacing: .24px;
 }
@@ -68,7 +68,7 @@ $poppins: 'Poppins', sans-serif;
 }
 /// 
 %button {
-    @include typography(1.8rem, 8.4rem, $poppins);
+    @include typography(1.8rem, 2.8rem, $poppins);
     font-weight: 700;
     letter-spacing: .45px;
 }
