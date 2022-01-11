@@ -1,0 +1,37 @@
+///Generated
+/// @access public
+/// @group layout
+/// @type map
+$grid-breakpoints: (
+    'xs': 0,
+    'sm': 320px,
+    'md': 600px,
+    'lg': 960px,
+    'xl': 1280px,
+    'xxl': 1920px
+);
+
+///Generated
+/// @access public
+/// @group layout
+/// @type map
+$container-max-widths: (
+    'sm': 540px,
+    'md': 720px,
+    'lg': 960px,
+    'xl': 1140px,
+    'xxl': 1320px
+);
+
+///Generated
+/// @access public
+/// @group layout
+/// @type map
+$gutters-grid: (
+    'xs': 3rem,
+    'sm': 4rem,
+    'md': 5rem,
+    'lg': 6rem,
+    'xl': 7rem,
+    'xxl': 4rem
+);

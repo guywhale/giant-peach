@@ -1,0 +1,11 @@
+/// Mixin for hardware enhancement
+/// Should be used when animating an element (more importantly when animating element's Z-axis
+/// @access public
+/// @group misc
+
+@mixin hardware($backface: true, $perspective: 1000) {
+    @if $backface {
+        backface-visibility: hidden;
+    }
+    perspective: $perspective;
+}

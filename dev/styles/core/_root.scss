@@ -1,0 +1,17 @@
+//* Core style for root elements
+:root {
+    @include anti-alias;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+details > * {
+    box-sizing: border-box;
+}

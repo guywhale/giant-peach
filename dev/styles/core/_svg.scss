@@ -1,0 +1,17 @@
+//* Core style for svg
+//* Svg with modifier --keepcolors will retain parent color
+//* Svg with modifier --keepsize will retain parent size
+svg {
+    &:not(.svg--keepcolors) {
+        &,
+        path {
+            fill: currentColor;
+        }
+    }
+
+    &:not(.svg--keepsize) {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+}

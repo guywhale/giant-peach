@@ -1,0 +1,10 @@
+/// Mixin to remove the outline of the element when the element has :focus
+/// @access public
+/// @group misc
+
+@mixin no-focus {
+    &:focus,
+    &:active {
+        outline-width: 0;
+    }
+}

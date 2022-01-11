@@ -1,0 +1,83 @@
+{
+    "extends": "airbnb-base",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jquery": true
+    },
+    "globals": {
+        "lightVars": "readonly"
+    },
+    "ignorePatterns": [
+        "webpack.config.js",
+        ".env.js.sample",
+        ".env.js"
+    ],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2017
+    },
+    "rules": {
+        "arrow-body-style": [2, "as-needed"],
+        "arrow-parens": [2, "as-needed"],
+        "comma-dangle": [
+            "error",
+            {
+                "functions": "never",
+                "arrays": "only-multiline",
+                "objects": "only-multiline"
+            }
+        ],
+        "indent": [2, 4, {
+            "SwitchCase": 1,
+            "VariableDeclarator": 1,
+            "outerIIFEBody": 1,
+            "FunctionDeclaration": {
+                "parameters": 1,
+                "body": 1
+            },
+            "FunctionExpression": {
+                "parameters": 1,
+                "body": 1
+            },
+            "CallExpression": {
+                "arguments": 1
+            },
+            "ArrayExpression": 1,
+            "ObjectExpression": 1,
+            "ImportDeclaration": 1,
+            "flatTernaryExpressions": false,
+            "ignoreComments": false
+        }],
+        "max-len": [1, {
+            "code": 100,
+            "tabWidth": 4,
+            "comments": 120,
+            "ignoreUrls": true,
+            "ignoreComments": false,
+            "ignoreRegExpLiterals": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true
+        }],
+        "no-param-reassign": [2, {
+            "props": false
+        }],
+        "no-plusplus": 0,
+        "no-restricted-syntax": [
+            2,
+            "LabeledStatement",
+            "WithStatement"
+        ],
+        "no-use-before-define": 0,
+        "object-curly-newline": [2, {
+            "ImportDeclaration": "never"
+        }],
+        "quote-props": [2, "consistent-as-needed", {
+            "keywords": false,
+            "unnecessary": true,
+            "numbers": false
+        }],
+        "semi": 2,
+        "import/no-extraneous-dependencies": 0
+    }
+}

@@ -1,0 +1,28 @@
+/// Check description!
+/// Mixin for absolute alignment
+/// Result can be code for alignment in X direction, Y direction, or both
+/// Alignment will be achieved by setting position: absolute
+/// The desired container to which the element must be aligned must have a flow changing position value
+/// @access public
+/// @group misc
+/// @param {value} $alignment - One of x y or both, default is xy
+
+@mixin align($alignment: xy) {
+    position: absolute;
+
+    @if $alignment == x {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @if $alignment == y {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @if $alignment == xy {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%, -50%);
+    }
+}

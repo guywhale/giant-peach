@@ -1,0 +1,12 @@
+{
+    "name": "sobold/light",
+    "description": "SoBold's WordPress Theme",
+    "require": {
+        "php": "^7.2|^8.0",
+        "tgmpa/tgm-plugin-activation": "^2.6"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4",
+        "interconnectit/search-replace-db": "^4.1"
+    }
+}

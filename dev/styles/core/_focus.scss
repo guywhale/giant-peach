@@ -1,0 +1,6 @@
+//* Remove focus for mouse users
+*:focus {
+    &:not(:focus-visible) {
+        outline: 0;
+    }
+}

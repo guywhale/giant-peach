@@ -1,0 +1,11 @@
+//* Core style for figure and figcaption
+//? Margin 0 found in ./margin
+figure {
+    max-width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+figcaption {
+    padding: 1rem;
+}

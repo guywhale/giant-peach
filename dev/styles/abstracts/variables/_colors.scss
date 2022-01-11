@@ -1,0 +1,40 @@
+////
+/// @access public
+/// @group colors
+////
+
+///Generated
+/// @type color
+$blue: #23283f;
+///Generated
+/// @type color
+$pink: #ea6ea0;
+///Generated
+/// @type color
+$green: #39b6b8;
+///Generated
+/// @type color
+$white: #f5f5f5;
+///Generated
+/// @type color
+$black: #000;
+
+///Generated
+/// @type map
+$light-colors: (
+    'primary': (
+        '1': $blue,
+    ),
+    'secondary': (
+        '1': $green,
+    ),
+    'tertiary': (
+        '1': $pink,
+    ),
+    'white': (
+        '1': $white,
+    ),
+    'black': (
+        '1': $black,
+    )
+);

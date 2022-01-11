@@ -1,0 +1,58 @@
+////
+/// @access public
+/// @group misc
+////
+
+/// Returns half of the passed integer
+/// @param {integer} $num - Any integer
+@function h($num) {
+    @return $num / 2;
+}
+/// Returns the passed integer with opposite sign
+/// @param {integer} $num - Any integer
+@function n($num) {
+    @return 0 - $num;
+}
+/// Returns half the passed integer with opposite sign
+/// @param {integer} $num - Any integer
+@function hn($num) {
+    @return n(h($num));
+}
+
+/// Returns a map merged with $defaults
+/// All values of $input-map will be preserved
+/// @param {map} $defaults - A map with default values
+/// @param {map} $input-map - A map with final values
+@function default-to($defaults, $input-map: ()) {
+    @if (type-of($defaults) == 'map') {
+        $map: $input-map;
+        @each $key, $value in $defaults {
+            @if (not map-has-key($input-map, $key)) {
+                $map: map-merge($map, ($key: $value));
+            }
+        }
+        @return $map;
+    } @else {
+        @error 'The function expects Sass maps';
+    }
+}
+
+/// Returns a map merged with $defaults
+/// Only values from defaults will be preserved in the final map
+/// @param {map} $defaults - A map with default values
+/// @param {map} $input-map - A map with final values
+@function filter-default-to($defaults, $map-variable: ()) {
+    @if (type-of($defaults) == 'map') {
+        $map: $defaults;
+        @each $key, $value in $defaults {
+            @if map-has-key($map-variable, $key) {
+                $map: map-merge($map, (
+                    $key: map-get($map-variable, $key)
+                ));
+            }
+        }
+        @return $map;
+    } @else {
+        @error 'The function expects Sass maps';
+    }
+}

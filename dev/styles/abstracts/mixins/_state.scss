@@ -1,0 +1,21 @@
+@mixin rest {
+    &,
+    &:link,
+    &:visited {
+        @content;
+    }
+}
+
+@mixin interact {
+    &:hover,
+    &:active {
+        @content;
+    }
+}
+
+@mixin disabled {
+    &:disabled,
+    &[disabled] {
+        @content;
+    }
+}

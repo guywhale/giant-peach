@@ -1,0 +1,12 @@
+//* Colors
+@each $color, $palette in $light-colors {
+    @each $key, $hex in $palette {
+        .#{$color}-#{$key} {
+            color: $hex;
+        }
+
+        .back-#{$color}-#{$key} {
+            background-color: $hex;
+        }
+    }
+}

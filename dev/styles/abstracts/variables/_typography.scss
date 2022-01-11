@@ -1,0 +1,64 @@
+////
+/// @access public
+/// @group typography
+////
+
+///Generated
+/// @type string
+$montserrat: 'Montserrat', sans-serif;
+
+/// 
+%h1 {
+    @include typography(3.2rem, 4.2rem, $montserrat);
+    font-weight: 700;
+    @include respond('lg') {
+        @include typography(3.7rem, 4.2rem);
+    }
+
+    @include respond('sm') {
+        @include typography(3.5rem, 3.5rem);
+    }
+}
+/// 
+%h2 {
+    @include typography(2.8rem, 3.4rem, $montserrat);
+}
+/// 
+%h3 {
+    @include typography(2.2rem, 2.5rem, $montserrat);
+}
+/// 
+%h4 {
+    @include typography(2rem, 2.3rem, $montserrat);
+    letter-spacing: .2px;
+}
+/// 
+%body2 {
+    @include typography(1.6rem, 2rem, $montserrat);
+}
+/// 
+%h5 {
+    @include typography(1.8rem, 2rem, $montserrat);
+}
+/// 
+%body {
+    @include typography(1.6rem, 2.4rem, $montserrat);
+}
+/// 
+%body-3 {
+    @include typography(1.6rem, 2rem, $montserrat);
+}
+/// 
+$headings: (
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'body',
+);
+/// 
+$custom-headings: (
+    'body2',
+    'body-3',
+);

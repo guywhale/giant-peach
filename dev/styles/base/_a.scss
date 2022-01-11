@@ -1,0 +1,7 @@
+a {
+    @include link;
+
+    &[class] {
+        text-decoration: none;
+    }
+}

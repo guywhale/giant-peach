@@ -1,0 +1,32 @@
+////
+/// @access public
+/// @group layout
+////
+
+/// Function to output spaces defined in variable
+/// @example scss - Space function
+///    padding-top: space('10');
+/// @param {string} $space - Custom space as defined in $spaces
+/// @return {string}
+
+@function space($space) {
+    @if map-has-key($spaces, $space) == false {
+        @error 'Space not defined: `#{$space}`';
+    }
+
+    @return map-get($spaces, $space);
+}
+
+/// Function to output spaces defined in variables
+/// @example scss - Space nth function
+///    padding-top: space('1');
+/// @param {string} $space - Custom space as defined in $spaces by index position
+/// @return {string}
+
+@function space-nth($index) {
+    @if length($spaces) < $index {
+        @error 'Index `#{$index}` not present in $spaces';
+    }
+
+    @return nth(map-values($spaces), $index);
+}

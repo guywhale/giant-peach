@@ -1,0 +1,24 @@
+//* Core style for forms
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+//* Allow vertical resize in textarea and [multiple]
+textarea,
+[multiple] {
+    resize: vertical;
+}
+
+//* Inherit font properties in placeholders
+input,
+textarea {
+    @include placeholder {
+        font: inherit;
+
+        //? Firefox fix
+        opacity: 1;
+    }
+}

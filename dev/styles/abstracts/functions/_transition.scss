@@ -1,0 +1,19 @@
+/// Function that returns a string containing all the properties with the same transition-time and ease
+/// @access public
+/// @example scss - Transition function
+///    transition: transition(color, background-color);
+///    // transition: "color" 0.3s ease-in-out 0s, width 0.3s ease-in-out 0s;
+/// @group misc
+/// @param {list} $properties - A list containing all the properties to transition, with no quotes
+/// @return {string}
+
+@function transition($properties...) {
+    $transitions-string: ();
+
+    @each $property in $properties {
+        $transitions-string: append($transitions-string,
+        $property $transition-time $transition-ease 0s, comma);
+    }
+
+    @return $transitions-string;
+}

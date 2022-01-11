@@ -1,0 +1,8 @@
+/// CONTINUE FROM HERE!
+/// Mixin to output useful pseudo element code
+
+@mixin pseudo($content: '', $position: absolute, $display: block) {
+    position: $position;
+    display: $display;
+    content: $content;
+}

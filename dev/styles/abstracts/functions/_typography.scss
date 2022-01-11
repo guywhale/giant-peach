@@ -1,0 +1,50 @@
+@use 'sass:math';
+
+/// Function that returns a unitless number with the requested line-height
+/// @access public
+/// @example scss - Line height function
+///    line-height: get-line-height(2.2rem, 3rem);
+/// @group typography
+/// @param {string} $font-size - The font size
+/// @param {string} $line-height - The desired line-height
+/// @return {number}
+
+@function line-height($font-size, $line-height) {
+    @return math.div($line-height, $font-size);
+}
+
+/// Allows the use of px, em, rem and unitless values to
+//  to be passed. They will always resolve to the px
+//  value.
+/// @access public
+/// @example scss - letter-spacing function
+///    letter-spacing: letter-spacing(2);
+/// @group typography
+/// @param {string} $letter-spacing - The desired letter spacing
+/// @return {number}
+
+$unit-values: (
+    'px',
+    'em',
+    'rem',
+    'normal',
+    'inherit',
+    'initial',
+    'unset'
+);
+
+@function letter-spacing($letter-spacing, $values: $unit-values) {
+    @if type-of($letter-spacing) == 'number' {
+        @if index($values, unit($letter-spacing)) {
+            @return $letter-spacing;
+        } @else {
+            @return $letter-spacing * 1px;
+        }
+    } @else {
+        @if index($values, $letter-spacing) {
+            @return $letter-spacing;
+        } @else {
+            @error 'Please enter a valid numeric or string letter-spacing value.';
+        }
+    }
+}

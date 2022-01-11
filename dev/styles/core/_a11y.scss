@@ -1,0 +1,9 @@
+//* Remove animations for people that prefer not to see them
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto;
+        transition-delay: .01ms !important;
+    }
+}

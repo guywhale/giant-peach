@@ -1,0 +1,15 @@
+/// Returns the passed number without its unit
+/// @example scss - Unitless function
+///     line-height: unitless(1.5rem);
+///     // 1.5
+/// @group misc
+/// @param {string} $number - A number with a unit attached
+/// @return {number}
+
+@function unitless($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}

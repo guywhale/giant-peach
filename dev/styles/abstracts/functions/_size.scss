@@ -1,0 +1,15 @@
+/// Function to output colors defined in variables
+/// @access public
+/// @example scss - Size function
+///    max-width: size('medium');
+/// @group colors
+/// @param {string} $size - Custom size as defined in $sizes
+/// @return {string}
+
+@function size($size) {
+    @if map-has-key($sizes, $size) == false {
+        @error 'Size not defined: `#{$size}`';
+    }
+
+    @return map-get($sizes, $size);
+}

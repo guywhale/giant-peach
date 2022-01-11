@@ -1,0 +1,7 @@
+//* Core style for body
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-flow: column nowrap;
+    scroll-behavior: smooth;
+}

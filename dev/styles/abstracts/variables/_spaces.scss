@@ -1,0 +1,27 @@
+////
+/// @access public
+/// @group layout
+////
+
+///Generated
+/// Space single unit
+/// @type string
+$space: 1rem;
+
+///Generated
+/// Leap single unit
+/// @type string
+$leap: 1rem;
+
+///Generated
+/// # Map storing all length sizes as defined in the json.
+/// Starting from 0, using `$space` as a base unit
+/// and following by `$leap` times an integer number.
+/// @type map
+$spaces: (
+    '0': 0,
+    '10': $space,
+    '20': ($space + $leap * 1),
+    '30': ($space + $leap * 2),
+    '40': ($space + $leap * 3)
+);

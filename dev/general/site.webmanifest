@@ -1,0 +1,9 @@
+{
+    "short_name": "Light",
+    "name": "Light",
+    "start_url": "/",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3367D6"
+}

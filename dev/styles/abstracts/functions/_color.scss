@@ -1,0 +1,26 @@
+/// Function to output colors defined in variables
+/// @access public
+/// @example scss - Color function
+///    background-color: color('white', '1');
+/// @group colors
+/// @param {string} $color - The name of the color as defined in the sass map
+/// @param {string} $tone - Number of the desired shade
+/// @return {color}
+
+@function color($color, $tone) {
+
+    @if map-has-key($light-colors, $color) {
+        $color: map-get($light-colors, $color);
+
+        @if map-has-key($color, $tone) {
+            $tone: map-get($color, $tone);
+            @return $tone;
+        }
+
+        @warn 'unknown tone `#{$tone}` in color';
+        @return null;
+    }
+
+    @warn 'unknown color `#{$color}` in palette';
+    @return null;
+}
