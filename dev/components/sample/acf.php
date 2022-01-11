@@ -27,4 +27,4 @@ $blockArgs = [
     },
 ];
 
-// acf_register_block_type($blockArgs);
+acf_register_block_type($blockArgs);
