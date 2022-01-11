@@ -1,20 +1,30 @@
 {
     "colors": {
-        "blue": "#23283F",
-        "pink": "#EA6EA0",
-        "green": "#39B6B8",
-        "white": "#F5F5F5",
-        "black": "#000"
+        "green": "#0cce6b",
+        "purple": "#390049",
+        "yellow": "#f2dc5d",
+        "pink": "#d81159",
+        "grey-dark": "#dddee0",
+        "grey-light": "#f7f7f7",
+        "white": "#ffffff",
+        "black": "#230b29"
     },
     "palette": {
-        "primary": {
-            "1": "blue"
-        },
-        "secondary": {
+        "green": {
             "1": "green"
         },
-        "tertiary": {
+        "purple": {
+            "1": "purple"
+        },
+        "yellow": {
+            "1": "yellow"
+        },
+        "pink": {
             "1": "pink"
+        },
+        "grey": {
+            "1": "grey-light",
+            "2": "grey-dark"
         },
         "white": {
             "1": "white"
@@ -25,11 +35,11 @@
     },
     "grid": {
         "xs": 0,
-        "sm": 320,
-        "md": 600,
-        "lg": 960,
-        "xl": 1280,
-        "xxl": 1920
+        "sm": 576,
+        "md": 768,
+        "lg": 992,
+        "xl": 1200,
+        "xxl": 1400
     },
     "container": {
         "sm": 540,
@@ -39,11 +49,11 @@
         "xxl": 1320
     },
     "gutters": {
-        "xs": 3,
+        "xs": 4,
         "sm": 4,
-        "md": 5,
-        "lg": 6,
-        "xl": 7,
+        "md": 4,
+        "lg": 4,
+        "xl": 4,
         "xxl": 4
     },
     "spaces": {
@@ -57,72 +67,104 @@
         "large": 600
     },
     "fonts": {
-        "montserrat": {
-            "name": "Montserrat",
+        "poppins": {
+            "name": "Poppins",
             "category": "sans-serif"
         }
     },
     "headings": {
-        "h1": {
-            "size": 32,
-            "line": 42,
-            "family": "montserrat",
-            "weight": 700,
+        "caption": {
+            "size": 74,
+            "line": 84,
+            "family": "poppins",
+            "weight": 600,
+            "spacing": 1.11,
             "respond": {
-                "lg": {
-                    "size": 37,
-                    "line": 42
-                },
-                "sm": {
-                    "size": 35,
-                    "line": 35
+                "md": {
+                    "size": 44,
+                    "line": 54,
+                    "spacing": 0.66
+                }
+            }
+        },
+        "h1": {
+            "size": 54,
+            "line": 64,
+            "family": "poppins",
+            "weight": 600,
+            "spacing": 0.81,
+            "respond": {
+                "md": {
+                    "size": 40,
+                    "line": 50,
+                    "spacing": 0.6
+
                 }
             }
         },
         "h2": {
-            "size": 28,
-            "line": 34,
-            "family": "montserrat"
+            "size": 34,
+            "line": 44,
+            "family": "poppins",
+            "weight": 500,
+            "spacing": 0.51,
+            "respond": {
+                "md": {
+                    "size": 34,
+                    "line": 40
+                }
+            }
         },
         "h3": {
-            "size": 22,
-            "line": 25,
-            "family": "montserrat"
+            "size": 24,
+            "line": 34,
+            "family": "poppins",
+            "weight": 500,
+            "spacing": 0.36
         },
         "h4": {
-            "size": 20,
-            "line": 23,
-            "family": "montserrat",
-            "spacing": 0.2
-        },
-        "body2": {
-            "size": 16,
-            "line": 20,
-            "family": "montserrat"
+            "size": 18,
+            "line": 28,
+            "family": "poppins",
+            "weight": 400,
+            "spacing": 0.27
         },
         "h5": {
-            "size": 18,
-            "line": 20,
-            "family": "montserrat"
+            "size": 16,
+            "line": 84,
+            "family": "poppins",
+            "weight": 400,
+            "spacing": 0.24
         },
         "body": {
-            "size": 16,
-            "line": 24,
-            "family": "montserrat"
+            "size": 18,
+            "line": 28,
+            "family": "poppins",
+            "weight": 400,
+            "spacing": 0.27
         },
-        "body-3": {
-            "size": 16,
-            "line": 20,
-            "family": "montserrat"
+        "emphasise": {
+            "size": 18,
+            "line": 28,
+            "family": "poppins",
+            "weight": 600,
+            "spacing": 0.27
+        },
+        "button": {
+            "size": 18,
+            "line": 84,
+            "family": "poppins",
+            "weight": 700,
+            "spacing": 0.45
         }
     },
     "links": {
-        "color": "primary-1",
-        "color-interact": "tertiary-1"
+        "color": "green-1",
+        "color-interact": "green-1"
     },
     "core": {
         "background": "white-1",
-        "color": "primary-1",
-        "line": 24
+        "color": "black-1",
+        "line": 28
     }
 }

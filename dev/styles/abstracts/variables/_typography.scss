@@ -5,48 +5,72 @@
 
 ///Generated
 /// @type string
-$montserrat: 'Montserrat', sans-serif;
+$poppins: 'Poppins', sans-serif;
 
 /// 
-%h1 {
-    @include typography(3.2rem, 4.2rem, $montserrat);
-    font-weight: 700;
-    @include respond('lg') {
-        @include typography(3.7rem, 4.2rem);
+%caption {
+    @include typography(7.4rem, 8.4rem, $poppins);
+    font-weight: 600;
+    letter-spacing: 1.11px;
+    @include respond('md') {
+        @include typography(4.4rem, 5.4rem);
+        letter-spacing: .66px;
     }
-
-    @include respond('sm') {
-        @include typography(3.5rem, 3.5rem);
+}
+/// 
+%h1 {
+    @include typography(5.4rem, 6.4rem, $poppins);
+    font-weight: 600;
+    letter-spacing: .81px;
+    @include respond('md') {
+        @include typography(4rem, 5rem);
+        letter-spacing: .6px;
     }
 }
 /// 
 %h2 {
-    @include typography(2.8rem, 3.4rem, $montserrat);
+    @include typography(3.4rem, 4.4rem, $poppins);
+    font-weight: 500;
+    letter-spacing: .51px;
+    @include respond('md') {
+        @include typography(3.4rem, 4rem);
+    }
 }
 /// 
 %h3 {
-    @include typography(2.2rem, 2.5rem, $montserrat);
+    @include typography(2.4rem, 3.4rem, $poppins);
+    font-weight: 500;
+    letter-spacing: .36px;
 }
 /// 
 %h4 {
-    @include typography(2rem, 2.3rem, $montserrat);
-    letter-spacing: .2px;
-}
-/// 
-%body2 {
-    @include typography(1.6rem, 2rem, $montserrat);
+    @include typography(1.8rem, 2.8rem, $poppins);
+    font-weight: 400;
+    letter-spacing: .27px;
 }
 /// 
 %h5 {
-    @include typography(1.8rem, 2rem, $montserrat);
+    @include typography(1.6rem, 8.4rem, $poppins);
+    font-weight: 400;
+    letter-spacing: .24px;
 }
 /// 
 %body {
-    @include typography(1.6rem, 2.4rem, $montserrat);
+    @include typography(1.8rem, 2.8rem, $poppins);
+    font-weight: 400;
+    letter-spacing: .27px;
 }
 /// 
-%body-3 {
-    @include typography(1.6rem, 2rem, $montserrat);
+%emphasise {
+    @include typography(1.8rem, 2.8rem, $poppins);
+    font-weight: 600;
+    letter-spacing: .27px;
+}
+/// 
+%button {
+    @include typography(1.8rem, 8.4rem, $poppins);
+    font-weight: 700;
+    letter-spacing: .45px;
 }
 /// 
 $headings: (
@@ -59,6 +83,7 @@ $headings: (
 );
 /// 
 $custom-headings: (
-    'body2',
-    'body-3',
+    'caption',
+    'emphasise',
+    'button',
 );

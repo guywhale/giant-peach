@@ -5,31 +5,47 @@
 
 ///Generated
 /// @type color
-$blue: #23283f;
+$green: #0cce6b;
 ///Generated
 /// @type color
-$pink: #ea6ea0;
+$purple: #390049;
 ///Generated
 /// @type color
-$green: #39b6b8;
+$yellow: #f2dc5d;
 ///Generated
 /// @type color
-$white: #f5f5f5;
+$pink: #d81159;
 ///Generated
 /// @type color
-$black: #000;
+$grey-dark: #dddee0;
+///Generated
+/// @type color
+$grey-light: #f7f7f7;
+///Generated
+/// @type color
+$white: #fff;
+///Generated
+/// @type color
+$black: #230b29;
 
 ///Generated
 /// @type map
 $light-colors: (
-    'primary': (
-        '1': $blue,
-    ),
-    'secondary': (
+    'green': (
         '1': $green,
     ),
-    'tertiary': (
+    'purple': (
+        '1': $purple,
+    ),
+    'yellow': (
+        '1': $yellow,
+    ),
+    'pink': (
         '1': $pink,
+    ),
+    'grey': (
+        '1': $grey-light,
+        '2': $grey-dark,
     ),
     'white': (
         '1': $white,

@@ -4,11 +4,11 @@
 /// @type map
 $grid-breakpoints: (
     'xs': 0,
-    'sm': 320px,
-    'md': 600px,
-    'lg': 960px,
-    'xl': 1280px,
-    'xxl': 1920px
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 1400px
 );
 
 ///Generated
@@ -28,10 +28,10 @@ $container-max-widths: (
 /// @group layout
 /// @type map
 $gutters-grid: (
-    'xs': 3rem,
+    'xs': 4rem,
     'sm': 4rem,
-    'md': 5rem,
-    'lg': 6rem,
-    'xl': 7rem,
+    'md': 4rem,
+    'lg': 4rem,
+    'xl': 4rem,
     'xxl': 4rem
 );
