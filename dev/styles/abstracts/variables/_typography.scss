@@ -68,7 +68,7 @@ $poppins: 'Poppins', sans-serif;
 }
 /// 
 %button {
-    @include typography(1.8rem, 2.8rem, $poppins);
+    @include typography(1.8rem, 2.5rem, $poppins);
     font-weight: 700;
     letter-spacing: .45px;
 }
