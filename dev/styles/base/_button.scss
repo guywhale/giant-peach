@@ -121,7 +121,7 @@
 
         .section-bg-color {
             height: calc(100% - 13px);
-            background-color: color('grey', '1');
+            // background-color: color('grey', '1');
             transform: translate(3px, 10px);
             transition: transform .3s ease-in-out;
         }
@@ -170,6 +170,25 @@
         .outline,
         .text {
             background-color: color('purple', '1');
+        }
+    }
+
+    &--text-link {
+        display: inline-flex;
+        align-items: center;
+
+        @include interact {
+            svg {
+                transform: translateX(1.7rem);
+                transition: transform .3s ease-in-out;
+            }
+        }
+
+        svg {
+            width: 1.9rem;
+            margin-left: 9px;
+            transform: translateX(0);
+            transition: transform .3s ease-in-out;
         }
     }
 }

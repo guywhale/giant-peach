@@ -15,44 +15,56 @@
         </ul>
         <div class="row">
             <div class="back-grey-1 py-5 my-2 col-md-6">
-                <a href="/" class="button button--white button--medium">
-                    <span class="outline"></span>
-                    <span class="section-bg-color"></span>
-                    <span class="text">Normal</span>
-                </a>
+                <?= Light\render('build/components/button', [
+                    'type'           => 'white',
+                    'sectionBgColor' => 'grey-1',
+                    'size'           => 'medium',
+                    'link'           => '/',
+                    'label'          => 'Normal',
+                ]);?>
             </div>
             <div class="back-grey-1 py-5 my-2 col-md-6">
-                <a href="/" class="button button--purple button--medium">
-                    <span class="outline"></span>
-                    <span class="section-bg-color"></span>
-                    <span class="text">Normal</span>
-                </a>
+                <?= Light\render('build/components/button', [
+                    'type'           => 'purple',
+                    'sectionBgColor' => 'grey-1',
+                    'size'           => 'medium',
+                    'link'           => '/',
+                    'label'          => 'Normal',
+                ]);?>
             </div>
             <div class="back-grey-1 py-5 my-2 col-md-6">
-                <a href="/" class="button button--purple button--small">
-                    <span class="outline"></span>
-                    <span class="section-bg-color"></span>
-                    <span class="text">Small</span>
-                </a>
+                <?= Light\render('build/components/button', [
+                    'type'           => 'purple',
+                    'sectionBgColor' => 'grey-1',
+                    'size'           => 'small',
+                    'link'           => '/',
+                    'label'          => 'Small',
+                ]);?>
             </div>
             <div class="back-grey-1 py-5 my-2 col-md-6">
-                <a href="/" class="button button--purple button--medium">
-                    <span class="outline"></span>
-                    <span class="section-bg-color"></span>
-                    <span class="text">Medium</span>
-                </a>
+                <?= Light\render('build/components/button', [
+                    'type'           => 'purple',
+                    'sectionBgColor' => 'grey-1',
+                    'size'           => 'medium',
+                    'link'           => '/',
+                    'label'          => 'Medium',
+                ]);?>
             </div>
             <div class="back-grey-1 py-5 my-2 col-md-6">
-                <a href="/" class="button button--purple button--large">
-                    <span class="outline"></span>
-                    <span class="section-bg-color"></span>
-                    <span class="text">Large</span>
-                </a>
+                <?= Light\render('build/components/button', [
+                    'type'           => 'purple',
+                    'sectionBgColor' => 'grey-1',
+                    'size'           => 'large',
+                    'link'           => '/',
+                    'label'          => 'Large',
+                ]);?>
             </div>
             <div class="back-grey-1 py-5 my-2 col-md-6">
-                <a href="/" class="button button--text-link">
-                    Text button
-                </a>
+                <?= Light\render('build/components/button', [
+                    'type'           => 'text-link',
+                    'link'           => '/',
+                    'label'          => 'Text button',
+                ]);?>
             </div>
         </div>
     </div>
