@@ -1,0 +1,176 @@
+.button {
+    @extend %button;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+
+    &--small {
+        min-width: 15.7rem;
+
+        @include interact {
+            .text {
+                min-width: 95.13%;
+            }
+        }
+
+        .outline {
+            width: 95.13%;
+        }
+
+        .section-bg-color {
+            width: calc(95.13% - 6px);
+        }
+
+        .text {
+            min-width: 91.72%;
+        }
+    }
+
+    &--medium {
+        min-width: 22.5rem;
+
+        @include interact {
+            .text {
+                min-width: 96.39%;
+            }
+        }
+
+        .outline {
+            width: 96.39%;
+        }
+
+        .section-bg-color {
+            width: calc(96.39% - 6px);
+        }
+
+        .text {
+            min-width: 94.22%;
+        }
+    }
+
+    &--large {
+        min-width: 26.9rem;
+
+        @include interact {
+            .text {
+                min-width: 96.98%;
+            }
+        }
+
+        .outline {
+            width: 96.98%;
+        }
+
+        .section-bg-color {
+            width: calc(96.98% - 6px);
+        }
+
+        .text {
+            min-width: 95.17%;
+        }
+    }
+
+    &--white,
+    &--purple {
+        height: 7.73rem;
+        transform: translateX(-13px);
+        transition: transform .3s ease-in-out;
+
+        @include interact {
+            transform: translateX(-8px);
+            transition: transform .3s ease-in-out;
+
+            .outline {
+                transform: translate(9px, 0);
+                transition: transform .3s ease-in-out, background-color .3s ease-in-out;
+
+            }
+
+            .section-bg-color {
+                transform: translate(12px, 3px);
+                transition: transform .3s ease-in-out;
+            }
+
+            .text {
+                height: calc(100% - 7px);
+                clip-path: polygon(0% 5px, calc(100% - 5px) 0%, 100% 100%, 0% calc(100% - 5px));
+                color: color('white', '1');
+                transition: min-width .3s ease-in-out, height .3s ease-in-out, clip-path .3s ease-in-out, background-color .3s ease-in-out;
+            }
+        }
+
+        .outline,
+        .section-bg-color {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            clip-path: polygon(0% 5px, calc(100% - 5px) 0%, 100% 100%, 0% calc(100% - 5px));
+        }
+
+        .outline {
+            height: calc(100% - 7px);
+            transform: translate(0, 7px);
+            transition: transform .3s ease-in-out, background-color .3s ease-in-out;
+        }
+
+        .section-bg-color {
+            height: calc(100% - 13px);
+            background-color: color('grey', '1');
+            transform: translate(3px, 10px);
+            transition: transform .3s ease-in-out;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-flex;
+            width: auto;
+            height: 6.3rem;
+            align-items: center;
+            justify-content: center;
+            padding: 1.7rem 1rem 2.1rem;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            transition: min-width .3s ease-in-out, height .3s ease-in-out, clip-path .3s ease-in-out, background-color .3s ease-in-out;
+        }
+    }
+
+    &--white {
+        color: color('green', '1');
+
+        @include interact {
+            .outline,
+            .text {
+                background-color: color('yellow', '1');
+            }
+        }
+
+        .outline,
+        .text {
+            background-color: color('white', '1');
+        }
+    }
+
+    &--purple {
+        color: color('white', '1');
+
+        @include interact {
+            .outline,
+            .text {
+                background-color: color('green', '1');
+            }
+        }
+
+        .outline,
+        .text {
+            background-color: color('purple', '1');
+        }
+    }
+}
+
