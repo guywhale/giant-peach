@@ -100,7 +100,7 @@
                 height: calc(100% - 7px);
                 clip-path: polygon(0% 5px, calc(100% - 5px) 0%, 100% 100%, 0% calc(100% - 5px));
                 color: color('white', '1');
-                transition: min-width .3s ease-in-out, height .3s ease-in-out, clip-path .3s ease-in-out, background-color .3s ease-in-out;
+                transition: min-width .3s ease-in-out, height .3s ease-in-out, clip-path .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
             }
         }
 
@@ -137,7 +137,7 @@
             justify-content: center;
             padding: 1.7rem 1rem 2.1rem;
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-            transition: min-width .3s ease-in-out, height .3s ease-in-out, clip-path .3s ease-in-out, background-color .3s ease-in-out;
+            transition: min-width .3s ease-in-out, height .3s ease-in-out, clip-path .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
         }
     }
 
