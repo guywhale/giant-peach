@@ -10,6 +10,13 @@
     padding: 3.8rem 3.7rem 0 3.4rem;
 
     &__home-link {
+        @include interact {
+            svg {
+                animation: shake .82s cubic-bezier(.36, .07, .19, .97) both;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
         svg {
             width: 17.9rem;
         }
@@ -20,20 +27,13 @@
         border: 0;
         background-color: transparent;
         border-radius: 0;
-    }
+        color: color('white', '1');
+        transform: scale(1);
+        transition: transform .3s ease-in-out;
 
-    &__burger {
         @include interact {
-            svg {
-                animation: shake .82s cubic-bezier(.36, .07, .19, .97) both;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-
-        svg {
-            path {
-                fill: color('white', '1');
-            }
+            transform: scale(1.1);
+            transition: transform .3s ease-in-out;
         }
     }
 
@@ -77,12 +77,45 @@
 
     &__brandmark-logo {
         width: 9.2rem;
+
+        @include interact {
+            svg {
+                animation: shake .82s cubic-bezier(.36, .07, .19, .97) both;
+                transform: translate3d(0, 0, 0);
+            }
+        }
     }
 
-    &__close {
-        svg {
-            path {
-                fill: color('white', '1');
+    &__menu-container {
+        margin-top: 5rem;
+    }
+
+    &__menu {
+        .menu-item {
+            a {
+                @extend %nav-link;
+                position: relative;
+                color: color('white', '1');
+                text-decoration: none;
+
+                @include interact {
+                    &::before {
+                        width: 100%;
+                        transition: width .5s ease-in-out;
+                    }
+                }
+
+                &::before {
+                    @include pseudo;
+                    z-index: -1;
+                    bottom: 8px;
+                    left: 0;
+                    width: 0;
+                    height: 1.5rem;
+                    background-color: color('green', '1');
+                    clip-path: polygon(0% 1px, calc(100% - 2px) 0%, 100% 100%, 0% calc(100% - 1px));
+                    transition: width .5s ease-in-out;
+                }
             }
         }
     }
