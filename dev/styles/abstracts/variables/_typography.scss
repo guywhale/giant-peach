@@ -74,9 +74,13 @@ $poppins: 'Poppins', sans-serif;
 }
 /// 
 %nav-link {
-    @include typography(4.4rem, 6.4rem, $poppins);
+    @include typography(4.4rem, 6.1rem, $poppins);
     font-weight: 600;
     letter-spacing: .66px;
+    @include respond('md') {
+        @include typography(3.4rem, 4.6rem);
+        letter-spacing: .51px;
+    }
 }
 /// 
 $headings: (

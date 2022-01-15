@@ -159,10 +159,17 @@
         },
         "nav-link": {
             "size": 44,
-            "line": 64,
+            "line": 61,
             "family": "poppins",
             "weight": 600,
-            "spacing": 0.66
+            "spacing": 0.66,
+            "respond": {
+                "md": {
+                    "size": 34,
+                    "line": 46,
+                    "spacing": 0.51
+                }
+            }
         }
     },
     "links": {
