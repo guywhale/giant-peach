@@ -26,7 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 slideInDiv = overlay.querySelector('.navigation__slide-in');
 
                 overlay.classList.toggle('open');
-                slideInDiv.classList.toggle('open');
+                setTimeout(
+                    () => {
+                        slideInDiv.classList.toggle('open');
+                    },
+                    200
+                );
             }
         });
     });
