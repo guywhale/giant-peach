@@ -54,18 +54,36 @@
         position: absolute;
         top: 0;
         right: 0;
+        overflow: hidden;
         width: 100%;
         max-width: 67.5rem;
         height: 100%;
         padding: 5.6rem 4.1rem 6.7rem 10.6rem;
         background-color: color('purple', '1');
         clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%);
+        -ms-overflow-style: none;
+        overflow-y: scroll;
+        scrollbar-width: none;
         transform: translateX(100%);
         transition: transform .5s ease-in-out;
+
+        @include respond('sm') {
+            padding: 4.6rem 4.1rem 5.7rem 8.6rem;
+            transition: transform .5s ease-in-out, clip-path .5s ease-in-out;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         &.open {
             transform: translate(0);
             transition: transform .5s ease-in-out;
+
+            @include respond('sm') {
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                transition: transform .5s ease-in-out, clip-path .5s ease-in-out;
+            }
         }
     }
 
@@ -88,11 +106,19 @@
 
     &__menu-container {
         margin-top: 5rem;
+
+        @include respond('md') {
+            margin-top: 3rem;
+        }
     }
 
     &__menu {
         .menu-item {
             padding: 1.4rem 0;
+
+            @include respond('xl') {
+                padding: 7px 0;
+            }
 
             a {
                 @extend %nav-link;
@@ -118,6 +144,72 @@
                     clip-path: polygon(0% 1px, calc(100% - 2px) 0%, 100% 100%, 0% calc(100% - 1px));
                     transition: width .5s ease-in-out;
                 }
+            }
+        }
+    }
+
+    &__bottom-row {
+        display: flex;
+        align-items: center;
+        margin-top: calc(6.2rem - 1.4rem);
+
+        @include respond('md') {
+            margin-top: 3rem;
+        }
+    }
+
+    &__social-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include interact {
+            .blob {
+                transform: rotate(-45deg);
+                transition: transform .3s ease-in-out;
+            }
+        }
+
+        &--facebook {
+            margin-right: 1rem;
+        }
+
+        &--twitter {
+            margin-right: 1px;
+        }
+
+        &--linkedin {
+            margin-right: 3px;
+        }
+
+        .blob {
+            display: inline-block;
+            transform: rotate(0deg);
+            transform-origin: center;
+            transition: transform .3s ease-in-out;
+        }
+
+        .logo {
+            position: absolute;
+            display: inline-block;
+            height: 2.1rem;
+            color: color('white', '1');
+
+            &--facebook {
+                top: 1rem;
+            }
+
+            &--twitter {
+                top: 1.5rem;
+            }
+
+            &--linkedin {
+                top: 1.7rem;
+            }
+
+            &--instagram {
+                top: 1.8rem;
             }
         }
     }
