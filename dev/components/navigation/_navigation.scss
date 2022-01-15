@@ -92,6 +92,8 @@
 
     &__menu {
         .menu-item {
+            padding: 1.4rem 0;
+
             a {
                 @extend %nav-link;
                 position: relative;
