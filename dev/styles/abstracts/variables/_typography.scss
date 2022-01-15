@@ -73,6 +73,12 @@ $poppins: 'Poppins', sans-serif;
     letter-spacing: .45px;
 }
 /// 
+%nav-link {
+    @include typography(4.4rem, 6.4rem, $poppins);
+    font-weight: 600;
+    letter-spacing: .66px;
+}
+/// 
 $headings: (
     'h1',
     'h2',
@@ -86,4 +92,5 @@ $custom-headings: (
     'caption',
     'emphasise',
     'button',
+    'nav-link',
 );
