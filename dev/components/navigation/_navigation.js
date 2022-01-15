@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    /**
+     * Set burger and close button to control slide in behaviour
+     * of navigation
+    */
     const toggleBtns = document.querySelectorAll('.navigation__toggle');
 
     toggleBtns.forEach(toggleBtn => {
