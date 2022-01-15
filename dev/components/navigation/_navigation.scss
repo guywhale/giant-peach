@@ -1,0 +1,89 @@
+.navigation {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.8rem 3.7rem 0 3.4rem;
+
+    &__home-link {
+        svg {
+            width: 17.9rem;
+        }
+    }
+
+    &__toggle {
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    &__burger {
+        @include interact {
+            svg {
+                animation: shake .82s cubic-bezier(.36, .07, .19, .97) both;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        svg {
+            path {
+                fill: color('white', '1');
+            }
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        visibility: hidden;
+
+        &.open {
+            visibility: visible;
+        }
+    }
+
+    &__slide-in {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 67.5rem;
+        height: 100%;
+        padding: 5.6rem 4.1rem 6.7rem 10.6rem;
+        background-color: color('purple', '1');
+        clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%);
+        transform: translateX(100%);
+        transition: transform .5s ease-in-out;
+
+        &.open {
+            transform: translate(0);
+            transition: transform .5s ease-in-out;
+        }
+    }
+
+    &__top-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__brandmark-logo {
+        width: 9.2rem;
+    }
+
+    &__close {
+        svg {
+            path {
+                fill: color('white', '1');
+            }
+        }
+    }
+}
