@@ -37,12 +37,31 @@
         }
     }
 
+    &__next-container {
+        position: relative;
+        bottom: 11.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include respond('sm') {
+            bottom: 8.2rem;
+        }
+    }
+
+    &__next {
+        z-index: 1;
+        width: 2.5rem;
+        background-color: transparent;
+        color: color('white', '1');
+    }
+
     .button {
         margin-top: 4.4rem;
     }
 
     .slick-prev {
-        display: none;
+        display: none !important;
     }
 
     .slick-list,
@@ -52,6 +71,7 @@
 
     .slick-dots {
         position: relative;
+        z-index: 1;
         bottom: 11.2rem;
         display: flex;
         align-items: center;
