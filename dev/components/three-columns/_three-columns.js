@@ -9,16 +9,18 @@ jQuery($ => {
     }
 
     $(window).on('scroll', () => {
-        $('.three-columns__section-title').each(function (i) {
+        $('.three-columns__section-title-col').each(function () {
             if (inView(this) === true) {
                 const lineAnimate = $(this).find('.line-animation');
 
-                setTimeout(
-                    () => {
-                        $(this).addClass('animate');
-                    },
-                    i * 100
-                );
+                $('.three-columns__section-title').each(function (i) {
+                    setTimeout(
+                        () => {
+                            $(this).addClass('animate');
+                        },
+                        i * 100
+                    );
+                });
 
                 setTimeout(
                     () => {
@@ -29,18 +31,20 @@ jQuery($ => {
             }
         });
 
-        $('.three-columns__subtitle').each(function (i) {
+        $('.three-columns__subtitle-col').each(function () {
             if (inView(this) === true) {
-                setTimeout(
-                    () => {
-                        $(this).addClass('animate');
-                    },
-                    i * 100
-                );
+                $('.three-columns__subtitle').each(function (i) {
+                    setTimeout(
+                        () => {
+                            $(this).addClass('animate');
+                        },
+                        i * 100
+                    );
+                });
             }
         });
 
-        $('.three-columns__row').each(function (i) {
+        $('.three-columns__col').each(function (index) {
             if (inView(this) === true) {
                 const whiteBoxes = $(this).find('.three-columns__white-box');
 

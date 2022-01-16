@@ -9,7 +9,7 @@ jQuery($ => {
     }
 
     $(window).on('scroll', () => {
-        $('.offer').each(function () {
+        $('.offer__col').each(function () {
             if (isScrolledIntoView(this) === true) {
                 const whiteBoxes = $(this).find('.offer__white-box');
                 const lineAnimate = $(this).find('.line-animation');

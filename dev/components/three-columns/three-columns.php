@@ -1,12 +1,12 @@
 <section class="three-columns back-purple-1">
     <div class="three-columns__container container">
         <div class="row">
-            <div class="offset-lg-1 col-lg-10">
+            <div class="three-columns__section-title-col offset-lg-1 col-lg-10">
                 <h2 class="three-columns__section-title caption white-1">
                     It’s time to make your business <strong class="line-animation line-animation--green">awesome.</strong>
                 </h2>
             </div>
-            <div class="offset-lg-2 col-lg-8">
+            <div class="three-columns__subtitle-col offset-lg-2 col-lg-8">
                 <p class="three-columns__subtitle white-1 h2">
                     We are the only company in the UK to offer this completely unique system of business assessment and transformation.
                 </p>
