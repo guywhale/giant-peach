@@ -30,13 +30,17 @@
             padding: 6.8rem 6.6rem 7.9rem 9.4rem;
             clip-path: polygon(0% 0%, calc(100% - .8125vw) 0%, 100% calc(100% - .8125vw), 0% 100%);
 
-            @include respond('sm') {
+            @include respond('md') {
                 padding: 3rem 3rem 3rem 4.5rem;
             }
 
             .line-animation {
                 &::before {
-                    bottom: 8px;
+                    bottom: 4px;
+
+                    @include respond('md') {
+                        bottom: 8px;
+                    }
                 }
             }
         }
@@ -50,7 +54,7 @@
                 margin-top: 6rem;
             }
 
-            @include respond('sm') {
+            @include respond('md') {
                 padding: 3rem 3rem 3rem 4.5rem;
             }
         }
