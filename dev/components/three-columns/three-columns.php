@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="three-columns__row row">
-            <div class="three-columns__col col-lg-4">
+            <div class="three-columns__col offset-md-2 col-md-8 offset-lg-3 col-lg-6 offset-xl-0 col-xl-4">
                 <div class="three-columns__white-box">
                     <h3 class="three-columns__box-title three-columns__box-title--growth-framework" aria-label="growth framework">
                         <?= \Light\svg('/wp-content/uploads/2022/01/growth-framework-icon.svg', [
@@ -37,7 +37,7 @@
                     ]);?>
                 </div>
             </div>
-            <div class="three-columns__col col-lg-4">
+            <div class="three-columns__col offset-md-2 col-md-8 offset-lg-3 col-lg-6 offset-xl-0 col-xl-4">
                 <div class="three-columns__white-box">
                     <h3 class="three-columns__box-title three-columns__box-title--growth-academy" aria-label="growth academy">
                         <?= \Light\svg('/wp-content/uploads/2022/01/growth-academy-icon.svg', [
@@ -61,7 +61,7 @@
                     ]);?>
                 </div>
             </div>
-            <div class="three-columns__col col-lg-4">
+            <div class="three-columns__col offset-md-2 col-md-8 offset-lg-3 col-lg-6 offset-xl-0 col-xl-4">
                 <div class="three-columns__white-box">
                     <h3 class="three-columns__box-title three-columns__box-title--growth-club" aria-label="growth club">
                         <?= \Light\svg('/wp-content/uploads/2022/01/growth-club-icon.svg', [
