@@ -43,14 +43,15 @@ jQuery($ => {
         $('.three-columns__row').each(function (i) {
             if (inView(this) === true) {
                 const whiteBoxes = $(this).find('.three-columns__white-box');
-                console.log(whiteBoxes);
 
-                setTimeout(
-                    () => {
-                        $(this).addClass('animate');
-                    },
-                    i * 100
-                );
+                $(whiteBoxes).each(function (i) {
+                    setTimeout(
+                        () => {
+                            $(this).addClass('animate');
+                        },
+                        i * 100
+                    );
+                });
             }
         });
     });
