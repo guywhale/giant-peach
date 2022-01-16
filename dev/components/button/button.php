@@ -15,8 +15,11 @@ if ($link && $label && $type) { ?>
             <span class="section-bg-color back-<?= $sectionBgColor; ?>"></span>
         <?php } ?>
 
-        <span class="text"><?= $label; ?></span>
-
+        <?php if ('white' === $type) { ?>
+            <span class="text <?= $sectionBgColor; ?>"><?= $label; ?></span>
+        <?php } else { ?>
+            <span class="text"><?= $label; ?></span>
+        <?php } ?>
         <?php if ('text-link' === $type) {
             echo Light\svg('/wp-content/uploads/2022/01/long-arrow-alt-right.svg');
         } ?>
