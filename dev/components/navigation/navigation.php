@@ -6,7 +6,10 @@
     </a>
 
     <button class="navigation__burger navigation__toggle">
-        <?= \Light\svg('/wp-content/uploads/2022/01/burger-menu.svg'); ?>
+        <span class="line"></span>
+        <span class="line line--middle"></span>
+        <span class="line"></span>
+
     </button>
 
     <div class="navigation__overlay">

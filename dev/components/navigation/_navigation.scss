@@ -37,6 +37,44 @@
         }
     }
 
+    &__burger {
+        display: inline-block;
+        width: 3.3rem;
+
+        @include interact {
+            .line {
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                transition: clip-path .2s linear;
+
+                &--middle {
+                    width: 100%;
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                    transition: width .2s linear, clip-path .2s linear;
+                }
+            }
+        }
+
+        .line {
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: color('white', '1');
+            clip-path: polygon(0% 1px, calc(100% - 1px) 0%, 100% 100%, 0% calc(100% - 1px));
+            transition: clip-path .2s linear;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+
+            &--middle {
+                width: 2.3rem;
+                margin-left: auto;
+                clip-path: polygon(1px 0%, 100% 0%, 100% calc(100% - 1px), 0% 100%);
+                transition: width .2s ease-in-out, clip-path .2s ease-in-out;
+            }
+        }
+    }
+
     &__toggle {
         padding: 0;
         border: 0;
@@ -44,11 +82,14 @@
         border-radius: 0;
         color: color('white', '1');
         transform: scale(1);
-        transition: transform .3s ease-in-out;
+        transition: color .3s linear, transform .3s linear;
+    }
 
+    &__close {
         @include interact {
+            color: color('pink', '1');
             transform: scale(1.1);
-            transition: transform .3s ease-in-out;
+            transition: color .3s linear, transform .3s linear;
         }
     }
 
