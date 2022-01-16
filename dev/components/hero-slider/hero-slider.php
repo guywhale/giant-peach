@@ -1,4 +1,4 @@
-<div class="hero-slider">
+<section class="hero-slider">
     <div class="hero-slider__slide back-green-1 purple-1">
         <img src="/wp-content/uploads/2022/01/sider-bg-desktop-v2.png"
             alt="man in office"
@@ -65,7 +65,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <div class="hero-slider__next-container container">
     <button class="hero-slider__next">
         <?= \Light\svg('/wp-content/uploads/2022/01/arrow-right.svg'); ?>
