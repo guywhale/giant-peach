@@ -23,7 +23,12 @@ jQuery($ => {
                     );
                 });
 
-                lineAnimate.addClass('expand');
+                setTimeout(
+                    () => {
+                        lineAnimate.addClass('expand');
+                    },
+                    600
+                );
             }
         });
     });
