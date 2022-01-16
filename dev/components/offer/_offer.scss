@@ -23,24 +23,35 @@
     }
 
     &__white-box {
+        position: relative;
+        z-index: 1;
+
         &--l {
             padding: 6.8rem 6.6rem 7.9rem 9.4rem;
+            clip-path: polygon(0% 0%, calc(100% - .8125vw) 0%, 100% calc(100% - .8125vw), 0% 100%);
 
             @include respond('sm') {
-                padding: 3rem;
+                padding: 3rem 3rem 3rem 4.5rem;
+            }
+
+            .line-animation {
+                &::before {
+                    bottom: 8px;
+                }
             }
         }
 
         &--r {
             padding: 6.1rem 5.1rem 5.4rem 5.6rem;
             margin-top: 36.8rem;
+            clip-path: polygon(0% .5625vw, calc(100% - 1.6875vw) 0%, 100% calc(100% - .5625vw), 1.6875vw 100%);
 
             @include respond('xl') {
                 margin-top: 6rem;
             }
 
             @include respond('sm') {
-                padding: 3rem;
+                padding: 3rem 3rem 3rem 4.5rem;
             }
         }
     }
