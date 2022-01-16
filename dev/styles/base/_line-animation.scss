@@ -1,0 +1,23 @@
+.line-animation {
+    position: relative;
+    font-weight: inherit;
+
+    &::before {
+        @include pseudo;
+        z-index: -1;
+        bottom: 1.6rem;
+        left: 0;
+        width: 0;
+        height: 2.1rem;
+        background-color: color('yellow', '1');
+        clip-path: polygon(0% 1px, calc(100% - 7px) 0%, 100% 100%, 0% calc(100% - 1px));
+        transition: width .5s ease-in-out;
+    }
+
+    &.expand {
+        &::before {
+            width: 100%;
+            transition: width .5s ease-in-out;
+        }
+    }
+}

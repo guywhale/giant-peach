@@ -1,0 +1,81 @@
+.hero-slider {
+    position: relative;
+    height: 93.1rem;
+
+    @include respond('sm') {
+        height: 70rem;
+    }
+
+    &__slide {
+        position: relative;
+        width: 100%;
+        padding-top: 23.1rem;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 3rem));
+
+        @include respond('sm') {
+            padding-top: 11rem;
+        }
+    }
+
+    &__slide-bg-img {
+        position: absolute;
+        z-index: -1;
+        top: 5.6rem;
+        right: -8.8rem;
+        width: 51.125%;
+        max-width: 81.8rem;
+
+        @include respond('md') {
+            top: unset;
+            bottom: 6rem;
+            width: 39.4rem;
+        }
+
+        @include respond('sm') {
+            bottom: 0;
+            width: 32.6rem;
+        }
+    }
+
+    .button {
+        margin-top: 4.4rem;
+    }
+
+    .slick-prev {
+        display: none;
+    }
+
+    .slick-list,
+    .slick-track {
+        height: 100%;
+    }
+
+    .slick-dots {
+        position: relative;
+        bottom: 11.2rem;
+        display: flex;
+        align-items: center;
+
+        @include respond('sm') {
+            bottom: 8.2rem;
+        }
+
+        li {
+            button {
+                width: 1rem;
+                height: 1rem;
+                margin-right: 1.4rem;
+                background-color: color('white', '1');
+                border-radius: 50%;
+                font-size: 0;
+                opacity: .35;
+            }
+        }
+
+        .slick-active {
+            button {
+                opacity: 1;
+            }
+        }
+    }
+}
