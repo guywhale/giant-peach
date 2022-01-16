@@ -1,0 +1,51 @@
+.offer {
+    position: relative;
+    top: -6rem;
+    padding: 12rem 0 12.3rem;
+    background-attachment: fixed;
+    background-image: url('/wp-content/uploads/2022/01/pattern-bg.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0% 0%, 100% 3rem, 100% calc(100% - 3rem), 0% 100%);
+
+    &__col-l {
+        position: relative;
+        left: -6rem;
+
+        @media only screen and (min-width: 1600px) {
+            left: -9rem;
+        }
+
+        @include respond('xxl') {
+            left: 0;
+        }
+    }
+
+    &__white-box {
+        &--l {
+            padding: 6.8rem 6.6rem 7.9rem 9.4rem;
+
+            @include respond('sm') {
+                padding: 3rem;
+            }
+        }
+
+        &--r {
+            padding: 6.1rem 5.1rem 5.4rem 5.6rem;
+            margin-top: 36.8rem;
+
+            @include respond('xl') {
+                margin-top: 6rem;
+            }
+
+            @include respond('sm') {
+                padding: 3rem;
+            }
+        }
+    }
+
+    .button {
+        margin-top: 4rem;
+    }
+}
