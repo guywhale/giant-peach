@@ -35,4 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    /**
+    * Shrink and colour background of navbar on scroll
+    */
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        const navBar = document.getElementById('navBar');
+
+        if (document.body.scrollTop > 102 || document.documentElement.scrollTop > 102) {
+            navBar.classList.add('shrink');
+        } else {
+            navBar.classList.remove('shrink');
+        }
+    }
 });

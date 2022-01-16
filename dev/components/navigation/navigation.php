@@ -1,4 +1,4 @@
-<nav class="navigation">
+<nav id="navBar" class="navigation">
     <a href="/" class="navigation__home-link" aria-label="Home link">
         <?= \Light\svg('/wp-content/uploads/2022/01/logo.svg', [
             'keepcolors' => true,

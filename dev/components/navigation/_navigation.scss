@@ -8,6 +8,20 @@
     align-items: center;
     justify-content: space-between;
     padding: 3.8rem 3.7rem 0 3.4rem;
+    transition: padding .3s ease-in-out, background-color .3s ease-in-out;
+
+    &.shrink {
+        padding: 1.6rem 3.7rem 1.2rem 3.4rem;
+        background-color: color('green', '1');
+        transition: padding .3s ease-in-out, background-color .3s ease-in-out;
+
+        .navigation__home-link {
+            svg {
+                width: 13.9rem;
+                transition: width .3s ease-in-out;
+            }
+        }
+    }
 
     &__home-link {
         @include interact {
@@ -19,6 +33,7 @@
 
         svg {
             width: 17.9rem;
+            transition: width .3s ease-in-out;
         }
     }
 
