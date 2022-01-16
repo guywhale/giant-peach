@@ -11,7 +11,18 @@ jQuery($ => {
     $(window).on('scroll', () => {
         $('.offer').each(function () {
             if (isScrolledIntoView(this) === true) {
+                const whiteBoxes = $(this).find('.offer__white-box');
                 const lineAnimate = $(this).find('.line-animation');
+
+                whiteBoxes.each(function (i) {
+                    setTimeout(
+                        () => {
+                            $(this).addClass('animate');
+                        },
+                        i * 200
+                    );
+                });
+
                 lineAnimate.addClass('expand');
             }
         });
