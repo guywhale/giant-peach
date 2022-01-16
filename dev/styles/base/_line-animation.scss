@@ -9,13 +9,19 @@
         left: 0;
         width: 0;
         height: 2.1rem;
-        background-color: color('yellow', '1');
+        // background-color: color('yellow', '1');
         clip-path: polygon(0% 1px, calc(100% - 7px) 0%, 100% 100%, 0% calc(100% - 1px));
         transition: width .5s ease-in-out;
 
         @include respond('md') {
             bottom: 1.2rem;
             height: 1.1rem;
+        }
+    }
+
+    &--yellow {
+        &::before {
+            background-color: color('yellow', '1');
         }
     }
 

@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-8 col-xl-7">
                     <p class="hero-slider__text caption">
-                        A <strong class="line-animation">proven</strong> formula to reinvigorate and advance your business.
+                        A <strong class="line-animation line-animation--yellow">proven</strong> formula to reinvigorate and advance your business.
                     </p>
                     <?= Light\render('build/components/button', [
                         'type'           => 'white',
@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-lg-8 col-xl-7">
                     <p class="hero-slider__text caption">
-                        A <strong class="line-animation">proven</strong> formula to reinvigorate and advance your business.
+                        A <strong class="line-animation line-animation--yellow">proven</strong> formula to reinvigorate and advance your business.
                     </p>
                     <?= Light\render('build/components/button', [
                         'type'           => 'white',
@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-lg-8 col-xl-7">
                     <p class="hero-slider__text caption">
-                        A <strong class="line-animation">proven</strong> formula to reinvigorate and advance your business.
+                        A <strong class="line-animation line-animation--yellow">proven</strong> formula to reinvigorate and advance your business.
                     </p>
                     <?= Light\render('build/components/button', [
                         'type'           => 'white',
